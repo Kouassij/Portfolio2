@@ -118,22 +118,22 @@ a {
   align-items: center;
 }
 
-.table__item {
+.tableau .table__item {
   max-width: 50%;
   padding: 1rem;
   flex-grow: 1;
   flex-shrink: 1;
 }
 
-img {
+.left .avatar {
   max-width: 100%;
-  height: auto;
+  border-radius: 50%;
 }
 
 h1.titre {
   color: inherit;
-  font-size: 4rem;
-  margin: 1.6rem 0 0 0;
+  font-size: 3rem;
+  margin: 1rem 0 0 0;
 }
 h2,
 h3,
@@ -165,6 +165,7 @@ span {
 img.avatar2 {
   max-width: 300px;
   float: right;
+  border-radius: 50%;
 }
 
 .header__reseau__list-unstyled {
@@ -313,7 +314,7 @@ header .right {
 }
 
 @media screen and (max-width: 749px) {
-  .table__item .avatar {
+  img .avatar {
     border-radius: 50%;
   }
 }
@@ -326,11 +327,11 @@ header .right {
   h1.titre {
     font-size: 5rem;
   }
-  .table__item .avatar {
+  img .avatar {
     max-width: 50%;
     border-radius: 50%;
   }
-  img.avatar2 {
+  img .avatar2 {
     padding-right: 3rem;
   }
 }
@@ -355,12 +356,18 @@ header .right {
   padding: 0.9rem 2rem;
 }
 
-.bar {
-  font-size: 12px;
-  padding: auto;
+.bar p {
+  margin: 0; /* Enlever la marge par défaut des <p> */
+  width: 100%;
+  position: absolute;
+  top: 10%; /* Centrer verticalement */
+  left: 100%; /* Centrer horizontalement */
+  /* transform: translate(-50%, -50%);  Ajustement précis du centrage */
+  text-align: center; /* Centrage du texte */
 }
+
 .skills .progress_bar {
-  display: inline-block;
+  display: block;
   margin: 15px 0px 25px;
   background: rgba(0, 0, 0, 0.15);
   height: 5px;
@@ -368,7 +375,10 @@ header .right {
   border-radius: 10px;
   text-align: left;
   margin-left: 10px;
+  top: 0;
+  left: 0;
 }
+
 .skills .bar {
   height: 5px;
   border-radius: 10px;
@@ -377,8 +387,69 @@ header .right {
   display: inline-block;
   top: 0;
   margin-bottom: 0px;
+  position: relative;
+}
+/*animation_Bar*/
+
+.skills .progress_bar {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.progress_bar:hover .bar {
+  animation: progress_comp 5s linear forwards;
+  /*animation: fillBar 2s ease-out forwards; /*Animation  pour remplir la barre */
 }
 
+/*.progress_bar:hover .bar {
+  animation-duration: 3s;
+  animation-name: progress_comp;
+}
+*/
+@keyframes progress_comp {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress);
+  }
+}
+
+.bar[data-progress="70%"] {
+  --progress: 70%;
+}
+.bar[data-progress="50%"] {
+  --progress: 50%;
+}
+.bar[data-progress="40%"] {
+  --progress: 40%;
+}
+.bar[data-progress="30%"] {
+  --progress: 30%;
+}
+.bar[data-progress="45%"] {
+  --progress: 45%;
+}
+.bar[data-progress="60%"] {
+  --progress: 60%;
+}
+@media screen and (max-width: 750px) {
+  .table__item .skills {
+    flex-direction: row;
+  }
+}
+
+/*
+@keyframes progress_comp {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+*/
 /*Portfolio*/
 .section-header p {
   text-align: center;
@@ -457,19 +528,33 @@ header .right {
   color: #2d4448;
 }
 .card__overlay {
-  display: none;
   background: rgba(0, 0, 0, 0.8);
   font-size: 4.5rem;
-  top: 0;
-  width: 50%;
+  bottom: 40%;
+  width: 100%;
   z-index: 0;
-  height: 68%;
+  height: 20%;
   position: absolute;
-}
-.card:hover .card__overlay {
-  display: block;
+  transform: translateY(10%);
 }
 
+.card:hover .card__overlay {
+  display: block;
+  transform: translateY(0);
+}
+
+.card:hover .card__overlay {
+  animation-duration: 1s;
+  animation-name: slideDown;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(10%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .card__overlay a {
   color: #fff;
   display: flex;
@@ -480,6 +565,12 @@ header .right {
   height: 100%;
 }
 .table__item img {
+  width: 300px; /* Largeur fixe */
+  height: 200px; /* Hauteur fixe */
+  object-fit: cover;
+}
+
+.card_img3 {
   width: 50%;
 }
 

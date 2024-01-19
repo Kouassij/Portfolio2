@@ -52,12 +52,14 @@
     <img class="Ecran">
      <div class="tableau">
         <div class="table__item">
-          <div class="hero__item right"><img  class="avatar"  src="./IMAGES/AVATAR.png" alt=""></div> </div> 
+          <div class="hero__item left"><img  class="avatar"  src="./IMAGES/AVATAR.png" alt=""></div> </div> 
           <div class="table__item"> 
-          <div class="hero__item left">
+          <div class="hero__item right">
             <span>Jeune Développeur web  </span>
             <h1 class="titre">Etudiant en développement d'application </h1>
             <a class="down" href=/cv/monCV.pdf download="monCV.pdf">Downdload CV</a>
+        
+                        
                 </div>
          </div>
            
@@ -123,40 +125,38 @@ Après une année  à l'université, j'ai décidé de continuer mon cursus en BT
                 <div class="skills">
                  <h3 class="Compet">Compétences en conception graphique</h3>
                   <div class="progress_bar">
-                    <div class="bar" style="width:70%" ><P>PHOTOSHOP</P></div>
+                        <div class="bar " data-progress="70%"><P>PHOTOSHOP</P></div>
                     </div>
                     <div class="progress_bar">
-                            <div class="bar"style="width:30%"><P>ILLUSTRATOR</P></div>
+                        <div class="bar " data-progress="50%"><P>ILLUSTRATOR</P></div>
                     </div>
-                    
 
-                     
+
                        <h3 >compétences en développement Front end </h3>
                     <div class="progress_bar">
-                         <div class="bar" style="width:80% ;"><P>HTML</P></div>
+                        <div class="bar" data-progress="70%"><P>HTML</P></div>
+                    <div class="progress_bar">
+                        <div class="bar" data-progress="50%"><P> CSS </P></div>
                     </div>
                     <div class="progress_bar">
-                        <div class="bar" style="width:50% ;"><P> CSS </P></div>
-                    </div>
-                    <div class="progress_bar">
-                        <div class="bar"style="width:30% ;"><P>JS</P>  </div>
+                        <div class="bar"data-progress="40%"><P>JAVASCRIPT</P></div>
                     </div>
                     <h3 >compétences en développement Back End</h3>
                     <div class="progress_bar">
-                        <div class="bar"style="width:40% ;"><P>PHP</P>  </div>
+                        <div class="bar"data-progress="30%"><P>PHP</P>  </div>
                     </div>
                      <div class="progress_bar">
-                        <div class="bar"style="width:45% ;"> <P>PYTHON</P> </div>
+                        <div class="bar" data-progress="45%"> <P>PYTHON</P> </div>
                     </div>
                      <div class="progress_bar">
-                        <div class="bar"style="width:50% ;"> <P>SQL</P> </div>
+                        <div class="bar"  data-progress="40%"> <P>SQL</P> </div>
                     </div>
                     <h3>Scripting</h3>
                     <div class="progress_bar">
-                        <div class="bar"style="width:70% ;"><P>Powershell</P>  </div>
+                        <div class="bar"data-progress="60%"><P>Powershell</P>  </div>
                     </div>
                     <div class="progress_bar">
-                        <div class="bar"style="width:70% ;"> <P>Bash / Batch </P> </div>
+                        <div class="bar" data-progress="50%"> <P>Bash / Batch </P></div>
                     </div>
                
                     
@@ -170,13 +170,13 @@ Après une année  à l'université, j'ai décidé de continuer mon cursus en BT
             
          </div> 
             
-        
+             
 </section>
 <section id="Portfolio"  class="portfolio" >
         <div class="container">
           <div class="section-header">
               <h2 class="section-titre ">Portfolio</h2>
-              <p>Je vous présente les différents projet mise en place</p>
+              <p>Je vous présente les différents projets réaliser pendant mon parcour scolaire</p>
             </div>
             <div class="tableau">
                  <div class="table__item   ">
@@ -192,7 +192,7 @@ Après une année  à l'université, j'ai décidé de continuer mon cursus en BT
                     </li>
                     <li >
                 
-                          <a href="#" data-filter="app">Application</a>
+                          <a href="#" data-filter="appli">Application</a>
                     </li>
                 </ul>
             </div>
@@ -204,7 +204,7 @@ Après une année  à l'université, j'ai décidé de continuer mon cursus en BT
                     <div class="card" data-category="web">
                         <img  src="https://picsum.photos/400/400?random=2" alt="projet_v1"  class="card_img">
                         <div class="card_IN">
-                        <h3 class="card__title">Mise en page d'un portfolio</h3>
+                       <h3 class="card__title">Mise en page d'un portfolio</h3>
                         <p class="category">Développement Web</p>
                         </div>
                          <div class="card__overlay">
@@ -254,20 +254,85 @@ Après une année  à l'université, j'ai décidé de continuer mon cursus en BT
                         
                    </div>
                 </div>
+
+
+
+
+
+
+                <div class="table__item hide">
+                    <div class="card" data-category="appli">
+                        <img  src="https://picsum.photos/400/400?random=20" alt="projet_v1"  class="card_img">
+                        <div class="card_IN">
+                        <h3 class="card__title">Mise en page d'un Sharpoint</h3>
+                        <p class="category">Application</p>
+                        </div>
+                         <div class="card__overlay">
+                        <a href="#"class="card__link" data-id="modal-2">+</a>
+                    </div>
+                    </div>
+                   <div class="modal " id="modal-2">
+                    <button class="modal__close">&times;</button>
+                    <div class="modal__content">
+                         <div class="container">
+                        <div class="tableau">
+
+                            <div class="table__item">
+                                <img  src="https://picsum.photos/400/400?random=4" alt="projet_v1"  class="card_img">
+                                <img  src="https://picsum.photos/400/400?random=10" alt="projet_v1"  class="card_img">
+                       
+
+                             </div>
+                              <div class="table__item">
+                                <h4 class="modal__titre  h2">Mise en place d'un  Portail collaboratif   </h4>
+                                    <p>
+                                        <svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg>
+
+                                        <i>Année 2024</i>
+                                    </p>
+                                    <P>
+                                        
+                                        <svg width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+                                        Développement d'application
+                                    </P>
+                                    <p>
+                                        Mise en place d'une application SharePoit qui est une plate-formé de services collaboratifs permettant par la création de sites, de partager, centraliser et d'organiser des informations et des documents avec des utilisateurs identifiés. Au travers des listes proposés sur SharePoint, il vous sera possible de gérer et de paratager vos rendez-vous, d'établi une liste de taches ou d'annonces, d'organiser des enquetes, de mettre à disposition un forum de discussion ou de creer vos propres listes. <h5 class="h3">Langages de programmation</h5>
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        
+                                       
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                   
+                   
+                        
+                   </div>
+                </div>
+
+
+
+
+
+
                  
 
                 <div class="table__item hide">
                     <div  class="card" data-category="web">
-                        <img   src="https://picsum.photos/400/400?random=3" alt="projet_v1"  class="card_img">
+                        <img   src="https://picsum.photos/200/200?random=3" alt="projet_v1"  class="card_img3">
                         <div class="card_IN">
                         <h3 class="card__title">Réalisation  d'un mini jeu pour enfant</h3>
                         <p class="category">developpement Web</p>
                     </div>
                     <div class="card__overlay">
-                         <a href="#" class="card__link" data-id="modal-2" >+</a>
+                         <a href="#" class="card__link" data-id="modal-3" >+</a>
                     </div>
                      </div>
-                    <div class="modal" id="modal-2">
+                    <div class="modal" id="modal-3">
                         <button class="modal__close">&times;</button>
                     <div class="modal__content">
                          <div class="container">
